@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "unh-por-fsf-pt-03-2021-u-c",
+			"path": "..\\..\\..\\GIT-WeeklyWorks\\unh-por-fsf-pt-03-2021-u-c"
+		},
+		{
+			"name": "Projects",
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Projects"
+	}
+}

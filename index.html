@@ -16,90 +16,98 @@
   </head>
   <body>
     <main class="container-fluid d-flex mt-5">
-      <section class="letSide border border-primary col-4">Current Waether</section>
-      <section class="rightSide border border-primary col-8 ">
-        <h4 >The Week Ahead</h2>
-        <div id="weekly" class="d-flex flex-row ">
-          <div class="card border-primary mb-3 mr-1 crdWeekly" >
-              <div class="card-body text-primary">
-              <h5 class="card-title">Sun</h5>
-              <p class="card-text">Just some weather stuff here</p>
+      <section class="letSide border border-primary col-4">Current Weather</section>
+      <section class="rightSide border border-primary col-8">
+        <h3 class="m-4">The Week Ahead</h3>
+        <div id="weekly" class="d-flex flex-row">
+          <div class="card border-primary mb-3 mr-1 crdWeekly">
+            <div class="card-body text-primary">
+              <h5 id="day01Title" class="card-title">Sun</h5>
+              <img id="day01Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day01Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
           <div class="card border-primary mb-3 mx-1 crdWeekly">
             <div class="card-body text-primary">
-              <h5 class="card-title">Mon</h5>
-              <p class="card-text">Just some weather stuff here</p>
+              <h5 id="day02Title" class="card-title">Mon</h5>
+              <img id="day02Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day02Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-1 crdWeekly" >
+          <div class="card border-primary mb-3 mx-1 crdWeekly">
             <div class="card-body text-primary">
-              <h5 class="card-title">Tue</h5>
-              <p class="card-text">Just some weather stuff here</p>
+              <h5 id="day03Title" class="card-title">Tue</h5>
+              <img id="day03Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day03Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-1 crdWeekly" >
+          <div class="card border-primary mb-3 mx-1 crdWeekly">
             <div class="card-body text-primary">
-              <h5 class="card-title">Wed</h5>
-              <p class="card-text">Just some weather stuff here</p>
+              <h5 id="day04Title" class="card-title">Wed</h5>
+              <img id="day04Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day04Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-1 crdWeekly" >
+          <div class="card border-primary mb-3 mx-1 crdWeekly">
             <div class="card-body text-primary">
-              <h5 class="card-title">Thu</h5>
-              <p class="card-text">Just some weather stuff here</p>
+              <h5 id="day05Title" class="card-title">Thu</h5>
+              <img id="day05Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day05Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-1 crdWeekly" >
+          <div class="card border-primary mb-3 mx-1 crdWeekly">
             <div class="card-body text-primary">
-              <h5 class="card-title">Fri</h5>
-              <p class="card-text">Just some weather stuff here</p>
+              <h5 id="day06Title" class="card-title">Fri</h5>
+              <img id="day06Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day06Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-1 crdWeekly" >
-            <div class="card-body text-primary ">
-              <h5 class="card-title">Sat</h5>
-              <p class="card-text">Just some weather stuff here</p>
+          <div class="card border-primary mb-3 mx-1 crdWeekly">
+            <div class="card-body text-primary">
+              <h5 id="day07Title" class="card-title">Sat</h5>
+              <img id="day07Icon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon" />
+              <p id="day07Desc" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
         </div>
-        <div id="details1" class="d-flex flex-row ">
-          <div class="card border-primary mb-3 mr-3 shadow crdDetails " >
+        <div><h3 class="m-3">Today's Details</h3></div>
+        <div id="details1" class="d-flex flex-row">
+          <div class="card border-primary mb-3 mr-3 shadow crdDetails">
             <div class="card-body text-secondary">
               <h5 class="card-title">Wind</h5>
               <p id="wind" class="card-text">Wind speed MPH</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-3 shadow crdDetails" >
+          <div class="card border-primary mb-3 mx-3 shadow crdDetails">
             <div class="card-body text-secondary">
               <h5 class="card-title">Humidity</h5>
               <p id="humidity" class="card-text">Humidity %</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-3 shadow crdDetails" >
+          <div class="card border-primary mb-3 mx-3 shadow crdDetails">
             <div class="card-body text-secondary">
               <h5 class="card-title">UV Index</h5>
-              <p id="uvIndex"  class="card-text">UV Index</p>
+              <p id="uvIndex" class="card-text">UV Index</p>
             </div>
           </div>
         </div>
-        <div id="details2" class="d-flex flex-row ">
+        <div id="details2" class="d-flex flex-row">
           <div class="card border-primary mb-3 mr-3 shadow crdDetails">
             <div class="card-body text-secondary">
               <h5 class="card-title">Dew Point</h5>
-              <p id="dewpoint"  class="card-text">Dew Point F</p>
+              <p id="dewpoint" class="card-text">Dew Point F</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-3 shadow crdDetails " >
+          <div class="card border-primary mb-3 mx-3 shadow crdDetails">
             <div class="card-body text-secondary">
               <h5 class="card-title">Visibility</h5>
-              <p id="visibility"  class="card-text">Just some weather stuff here</p>
+              <p id="visibility" class="card-text">Just some weather stuff here</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 mx-3 shadow crdDetails" >
+          <div class="card border-primary mb-3 mx-3 shadow crdDetails">
             <div class="card-body text-secondary">
               <h5 class="card-title">Sunrise/Sunet</h5>
-              <p id="sunrise"  class="card-text">Sunrise: 05:23 AM<br>Sunset: 08:15 PM</p>
+              <p id="sunrise" class="card-text">Sunrise: 05:23 AM<br />Sunset: 08:15 PM</p>
             </div>
           </div>
         </div>
