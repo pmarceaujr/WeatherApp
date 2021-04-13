@@ -18,6 +18,8 @@ searchBtn.addEventListener("click", function () {
     }
     $("#selectCityState").val('');//Reset the picklist after the weater dispalys
     saveTheCity()
+    $("#selectCityState").empty();
+    $('#selectCityState').append($('<option value="" disabled selected >Enter a location or select from the list...</option>'))
     loadCityWeatherList()
 });
 
@@ -64,7 +66,6 @@ function getLongLat() {
                 })
             }
             else {
-
                 console.log(response1)
                 okToProceed = false
             }
@@ -82,7 +83,7 @@ function getWeather() {
                     //Loop to populate the 5-day forecast
                     for (let i = 1; i < 6; i++) {
                         let dayTitleCard = $(`#day0${i}Title`)
-                        dayTitleCard.text(dayjs.unix(data.daily[i].dt).format('ddd'))
+                        dayTitleCard.text(dayjs.unix(data.daily[i].dt).format('ddd    MM/DD'))
                         let dayIconCard = $(`#day0${i}Icon`)
                         dayIconCard.attr("src", "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png")
                         let dayDescCard = $(`#day0${i}Desc`)
@@ -141,7 +142,6 @@ function getWeather() {
 function saveTheCity() {
     let matchFound = false
     cityWeatherList = JSON.parse(localStorage.getItem("cityWeatherList"));
-
     if (!cityWeatherList) {
         localStorage.setItem("cityWeatherList", JSON.stringify(""));
         cityWeatherList = []
@@ -158,10 +158,7 @@ function saveTheCity() {
             localStorage.setItem("cityWeatherList", JSON.stringify(cityWeatherList));
         }
     }
-
-
 }
-//localStorage.removeItem("cityWeatherList");
 
 //code to load the saved cities from localstorage into the options of the select input
 function loadCityWeatherList() {
@@ -177,3 +174,4 @@ function loadCityWeatherList() {
 };
 
 loadCityWeatherList()
+//localStorage.removeItem("cityWeatherList");
