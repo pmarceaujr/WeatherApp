@@ -137,16 +137,16 @@ function getWeather(data2) {
     // UV index: < 3 favorable; 3-5 moderate; 6-7 severe; 8+ extreme
     $("#currentUvi").removeClass();
     if (parseInt(data2.current.uvi) < 3) {
-        $("#currentUvi").addClass("uviGood")
+        $("#currentUvi").addClass("uviGood card-text p-lg ")
     }
     else if (parseInt(data2.current.uvi) < 6) {
-        $("#currentUvi").addClass("uviModerate")
+        $("#currentUvi").addClass("uviModerate card-text p-lg ")
     }
     else if (parseInt(data2.current.uvi) < 8) {
-        $("#currentUvi").addClass("uviBad")
+        $("#currentUvi").addClass("uviBad card-text p-lg ")
     }
     else {
-        $("#currentUvi").addClass("uviExtreme")
+        $("#currentUvi").addClass("uviExtreme card-text p-lg ")
     }
     saveTheCity()
 };
