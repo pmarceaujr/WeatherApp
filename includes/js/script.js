@@ -135,6 +135,7 @@ function getWeather(data2) {
     let sunCard = $("#sunrise")
     sunCard.html("Sunrise: " + dayjs.unix(data2.current.sunrise).format('hh:MM:A') + "</br>Sunset: " + dayjs.unix(data2.current.sunset).format('hh:MM:A'))
     // UV index: < 3 favorable; 3-5 moderate; 6-7 severe; 8+ extreme
+    $("#currentUvi").removeClass();
     if (parseInt(data2.current.uvi) < 3) {
         $("#currentUvi").addClass("uviGood")
     }
