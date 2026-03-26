@@ -59,7 +59,7 @@ function checkCityEntry() {
 
 // getLongLat function uses the city, state that was entered or selected to get the lat/lon to pass to the OneCall Weather API for the full weather details
 function callTheAPIs() {
-    let weatherUrl = `https://api.openweathermap.org/data/3.0/weather?q=${searchCityState},US&Appid=5ed5e49ac39b037ea9bc2e6bc2eab0a6&units=imperial`
+    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCityState},US&Appid=5ed5e49ac39b037ea9bc2e6bc2eab0a6&units=imperial`
     fetch(weatherUrl)
         .then(function (response1) {
             if (response1.ok) {
