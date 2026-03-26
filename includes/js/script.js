@@ -76,7 +76,7 @@ function callTheAPIs() {
             latitude = data1.coord.lat
             longitude = data1.coord.lon
             //set up the second fetch to return the actual weather data once we get valid longitude and latitude values.
-            let oneCallUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=5ed5e49ac39b037ea9bc2e6bc2eab0a6`
+            let oneCallUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=5ed5e49ac39b037ea9bc2e6bc2eab0a6&units=imperial`
             return fetch(oneCallUrl);
         })
         .then(function (response2) {
