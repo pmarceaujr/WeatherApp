@@ -9,6 +9,7 @@ let cityWeatherList = [];       //arry to store the locastorage city/state value
 
 // Add event listener to search button
 searchBtn.addEventListener("click", function () {
+    console.log("Enter city")
     okToProceed = checkCityEntry()
     if (okToProceed) {
         okToProceed = callTheAPIs()
